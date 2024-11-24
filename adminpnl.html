@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="Mainlogo.svg" alt="YourLogo" class="logo-img">
+            <span class="logo-text">The Question Paper</span>
+        </a>
+    </div>
+    <div class="container">
+        <h1>Admin Panel</h1>
+
+        <!-- Add University Section -->
+        <section id="addDataSection">
+            <h2>Add New Data</h2>
+
+            <!-- Add University Form -->
+            <form id="addUniversityForm">
+                <fieldset>
+                    <legend>Add University</legend>
+                    <label for="newUniversity">University Name:</label>
+                    <input type="text" id="universityName" placeholder="Enter University Name">
+                    <button type="submit">Add University</button>
+                </fieldset>
+            </form>
+            <div id="addUniversityFeedback" style="display:none;"></div>
+
+            <!-- Add Course Form -->
+            <form id="addCourseForm">
+                <fieldset>
+                    <legend>Add Course</legend>
+                    <label for="courseUniversity">Select University:</label>
+                    <select id="courseUniversity" required>
+                        <option value="">Select University</option>
+                    </select>
+                    <label for="newCourse">Course Name:</label>
+                    <input type="text" id="newCourse" name="newCourse" required>
+                    <button type="submit">Add Course</button>
+                </fieldset>
+            </form>
+            <div id="addCourseFeedback" style="display: none;">
+                <p class="feedback-message"></p>
+            </div>
+
+            <form id="addSemesterForm">
+                <fieldset>
+                    <legend>Add Semester</legend>
+                    <!-- University Selection -->
+                    <label for="semesterUniversity">Select University:</label>
+                    <select id="semesterUniversity" required>
+                        <option value="">Select University</option>
+                    </select>
+
+                    <!-- Course Selection -->
+                    <label for="semesterCourse">Select Course:</label>
+                    <select id="semesterCourse" required>
+                        <option value="">Select Course</option>
+                    </select>
+
+                    <!-- Semester Input -->
+                    <label for="newSemester">Semester Name:</label>
+                    <input type="text" id="newSemester" name="newSemester" placeholder="e.g., Semester 1" required>
+
+                    <button type="submit">Add Semester</button>
+                </fieldset>
+            </form>
+
+            <!-- Feedback Message -->
+            <div id="addSemesterFeedback" style="display: none; margin-top: 10px;">
+                <span class="feedback-message"></span>
+            </div>
+        </section>
+
+        <!-- Add Subject Form -->
+        <section id="addSubjectSection">
+            <h2>Add Subject</h2>
+            <form id="addSubjectForm">
+                <fieldset>
+                    <legend>Add Subject</legend>
+
+                    <!-- University Selection -->
+                    <label for="subjectUniversity">Select University:</label>
+                    <select id="subjectUniversity" required>
+                        <option value="">Select University</option>
+                    </select>
+
+                    <!-- Course Selection -->
+                    <label for="subjectCourse">Select Course:</label>
+                    <select id="subjectCourse" required>
+                        <option value="">Select Course</option>
+                    </select>
+
+                    <!-- Semester Selection -->
+                    <label for="subjectSemester">Select Semester:</label>
+                    <select id="subjectSemester" required>
+                        <option value="">Select Semester</option>
+                    </select>
+
+                    <!-- Subject Name -->
+                    <label for="newSubject">Subject Name:</label>
+                    <input type="text" id="newSubject" name="newSubject"
+                        placeholder="Enter subject name (e.g., Data Structures)" required>
+
+                    <button type="submit">Add Subject</button>
+                </fieldset>
+            </form>
+
+            <!-- Feedback Message -->
+            <div id="addSubjectFeedback" style="display: none; margin-top: 10px;">
+                <span class="feedback-message"></span>
+            </div>
+        </section>
+
+
+        <!-- Upload Question Papers Section -->
+        <section id="uploadQuestionPapersSection">
+            <h2>Upload Question Papers</h2>
+            <form id="uploadQuestionPapersForm">
+                <fieldset>
+                    <legend>Upload Question Papers</legend>
+
+                    <!-- University Selection -->
+                    <label for="uploadUniversity">Select University:</label>
+                    <select id="uploadUniversity" required>
+                        <option value="">Select University</option>
+                    </select>
+
+                    <!-- Course Selection -->
+                    <label for="uploadCourse">Select Course:</label>
+                    <select id="uploadCourse" required>
+                        <option value="">Select Course</option>
+                    </select>
+
+                    <!-- Semester Selection -->
+                    <label for="uploadSemester">Select Semester:</label>
+                    <select id="uploadSemester" required>
+                        <option value="">Select Semester</option>
+                    </select>
+
+                    <!-- Subject Selection -->
+                    <label for="uploadSubject">Select Subject:</label>
+                    <select id="uploadSubject" required>
+                        <option value="">Select Subject</option>
+                    </select>
+
+                    <!-- File Upload -->
+                    <label for="uploadFiles">Upload Question Papers (PDFs):</label>
+                    <input type="file" id="uploadFiles" multiple accept="application/pdf" required>
+
+                    <label for="tags">Tags (comma-separated):</label>
+                    <input type="text" id="tags" name="tags" required
+                        placeholder="Enter tags : eg : Data Structures, Algorithms, etc.">
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required
+                        placeholder="Enter a brief description of the question paper"></textarea>
+
+
+                    <!-- Submit Button -->
+                    <button type="submit">Upload Question Papers</button>
+                </fieldset>
+            </form>
+
+            <!-- Feedback Message -->
+            <div id="uploadFeedback" style="display: none; margin-top: 10px;">
+                <span class="feedback-message"></span>
+            </div>
+        </section>
+
+
+
+
+        <section class="ding">
+            <h2>Delete Data</h2>
+
+            <!-- Delete University Section -->
+            <div>
+                <label for="deleteUniversity">Select University:</label>
+                <select id="deleteUniversity" required>
+                    <option value="">Select University</option>
+                </select>
+                <button id="deleteUniversityButton">Delete University</button>
+                <div id="deleteUniversityFeedback" style="display:none;"></div>
+            </div>
+
+            <!-- Delete Course Section -->
+            <div>
+                <label for="deleteCourse">Select Course:</label>
+                <select id="deleteCourse" required>
+                    <option value="">Select Course</option>
+                </select>
+                <button id="deleteCourseButton">Delete Course</button>
+                <div id="deleteCourseFeedback" style="display:none;"></div>
+            </div>
+
+            <!-- Delete Semester Section -->
+            <div>
+                <label for="deleteSemester">Select Semester:</label>
+                <select id="deleteSemester" required>
+                    <option value="">Select Semester</option>
+                </select>
+                <button id="deleteSemesterButton">Delete Semester</button>
+                <div id="deleteSemesterFeedback" style="display:none;"></div>
+            </div>
+
+            <!-- Delete Subject Section -->
+            <div>
+                <label for="deleteSubject">Select Subject:</label>
+                <select id="deleteSubject" required>
+                    <option value="">Select Subject</option>
+                </select>
+                <button id="deleteSubjectButton">Delete Subject</button>
+                <div id="deleteSubjectFeedback" style="display:none;"></div>
+            </div>
+
+            <!-- Delete Question Paper Section -->
+            <div>
+                <label for="deleteQuestionPaper">Select Question Paper:</label>
+                <select id="deleteQuestionPaper" required>
+                    <option value="">Select Question Paper</option>
+                </select>
+                <button id="deleteQuestionPaperButton">Delete Question Paper</button>
+                <div id="deleteQuestionPaperFeedback" style="display:none;"></div>
+            </div>
+        </section>
+
+
+        <script src="admin.js" type="module"></script>
+</body>
+
+</html>

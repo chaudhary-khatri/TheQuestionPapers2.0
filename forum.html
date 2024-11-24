@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Post Discussion and more</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="forum.css">
+    <script type="module" src="forum.js" defer></script>
+</head>
+
+<body>
+
+
+    <main>
+        <section>
+
+            <div class="container">
+                <a href="index.html" class="home-icon">
+                    <i class="fas fa-home home"></i>
+                </a>
+                <a href="index.html" class="home-logo-text">
+                    <h2>TheQuestionPapers </h2>
+                </a>
+                <h3>The QPs Discussions</h3>
+                <!-- List of Questions -->
+                <ul id="questionsList"></ul>
+            </div>
+            <div class="askquestiondiv">
+                <!-- Question Posting Form -->
+                <input type="text" id="questionInput" placeholder="Ask a question">
+                <button id="postQuestionButton">Post Question</button>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

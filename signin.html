@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register & Login | The Question Paper</title>
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="android-chrome-192x192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="android-chrome-512x512.png" type="image/png" sizes="512x512">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="signin.css">
+
+  <!-- JavaScript -->
+  <script type="module" src="signin.js" defer></script>
+</head>
+
+<body>
+  <!-- Logo Container -->
+  <header class="logo-container">
+    <a href="index.html" class="logo">
+      <img src="Mainlogo.svg" alt="The Question Paper Logo" class="logo-img">
+      <span class="logo-text">The Question Paper</span>
+    </a>
+  </header>
+
+  <!-- Sign Up and Sign In Section -->
+  <main>
+    <!-- Register Form -->
+    <section class="container" id="signup" aria-labelledby="signup-title" hidden>
+      <h1 class="form-title" id="signup-title">Create Your Account</h1>
+      <p class="form-description">Join us to access a wide range of previous year question papers and AI-generated
+        solutions!</p>
+      <form method="post" action="#" aria-describedby="signUpMessage" novalidate>
+        <div id="signUpMessage" class="messageDiv" role="alert" hidden></div>
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="fName" placeholder="First Name" required aria-required="true" aria-label="First Name"
+            minlength="2" maxlength="50" pattern="^[A-Za-z]+$">
+          <label for="fName">First Name</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="lName" placeholder="Last Name" required aria-required="true" aria-label="Last Name"
+            minlength="2" maxlength="50" pattern="^[A-Za-z]+$">
+          <label for="lName">Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="rEmail" placeholder="Email" required aria-required="true" aria-label="Email Address">
+          <label for="rEmail">Email</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="rPassword" placeholder="Password" required aria-required="true"
+            aria-label="Password" minlength="8">
+          <label for="rPassword">Password</label>
+        </div>
+
+        <button class="btn" id="submitSignUp" type="submit">
+          <span id="signUpButtonText">Sign Up</span>
+          <i id="signUpLoading" class="fas fa-spinner fa-spin" hidden></i>
+        </button>
+      </form>
+
+      <p class="or">---------- or --------</p>
+      <div class="icons" role="navigation" aria-label="Social Media Logins">
+        <button class="social-btn google" aria-label="Sign in with Google" id="googleSignInButton">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="social-btn facebook" aria-label="Sign in with Facebook" id="facebookSignInButton">
+          <i class="fab fa-facebook"></i>
+        </button>
+      </div>
+
+      <div class="links">
+        <p>Already have an account?</p>
+        <button id="signInButton" aria-controls="signIn">Sign In</button>
+      </div>
+    </section>
+
+    <!-- Sign In Form -->
+    <section class="container" id="signIn" aria-labelledby="signIn-title">
+      <h1 class="form-title" id="signIn-title">Login</h1>
+      <p class="form-description">Welcome back! Sign in to access your AI mock tests.</p>
+      <form method="post" action="#" aria-describedby="signInMessage" novalidate>
+        <div id="signInMessage" class="messageDiv" role="alert" hidden></div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email" required aria-required="true" aria-label="Email Address">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required aria-required="true"
+            aria-label="Password" minlength="8">
+          <label for="password">Password</label>
+        </div>
+
+        <p class="recover">
+          <a href="#" id="recoverPasswordLink">Forgot Password?</a>
+        </p>
+
+        <button class="btn" id="submitSignIn" type="submit">
+          <span id="signInButtonText">Sign In</span>
+          <i id="signInLoading" class="fas fa-spinner fa-spin" hidden></i>
+        </button>
+      </form>
+
+      <p class="or">---------- or --------</p>
+
+      <div class="icons" role="navigation" aria-label="Social Media Logins">
+        <button class="social-btn google" aria-label="Sign in with Google">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="social-btn facebook" aria-label="Sign in with Facebook">
+          <i class="fab fa-facebook"></i>
+        </button>
+      </div>
+
+      <div class="links">
+        <p>Don't have an account?</p>
+        <button id="signUpButton" aria-controls="signup">Sign Up</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Password Recovery Modal -->
+  <div id="passwordRecoveryModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="passwordRecoveryTitle"
+    hidden>
+    <div class="modal-content" role="document">
+      <button class="close" id="closeModal" aria-label="Close">&times;</button>
+      <h2 id="passwordRecoveryTitle">Password Recovery</h2>
+      <p>Enter your email below to receive a password reset link.</p>
+      <form id="passwordRecoveryForm" aria-describedby="passwordRecoveryMessage" novalidate>
+        <div id="passwordRecoveryMessage" class="messageDiv" role="alert" hidden></div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="recoveryEmail" placeholder="Enter your email" required aria-required="true"
+            aria-label="Recovery Email Address">
+          <label class="recoveryEmaillabel" for="recoveryEmail">Email</label>
+        </div>
+
+        <!-- Updated submit button with id for JS -->
+        <button class="btn" type="submit" id="recoveryFormSubmitButton">
+          <span>Send Reset Link</span>
+          <i class="fas fa-spinner fa-spin" id="recoveryLoading" hidden></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional: Overlay for Modal -->
+  <div id="modalOverlay" class="overlay" hidden></div>
+
+</body>
+
+</html>

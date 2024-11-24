@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #e2f4fe, #c9d6ff);
+}
+
+/* Logo */
+.logo-container {
+    width: 100%;
+    background: linear-gradient(to right, #74ecff50, #80a8fd50);
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 80px;
+    transition: width 0.3s ease;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3871c1;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.logo-container a span{
+    text-decoration: none;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #5b097d;
+    background: #ebfeff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 38, 46, 0.1);
+    padding: 15px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+h2::after, h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #5b097d;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.data-section {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #14227d;
+    background: #dcdcfd92;
+    padding: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease;
+}
+
+fieldset:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: #f6f8ffa4;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #006134;
+}
+
+button {
+    background: #02b35d ;
+    color: rgb(255, 255, 255);
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background:  #00cb3d;
+    transform: translateY(-2px);
+}
+
+
+#deleteData {
+    background-color: #b00000;
+}
+
+#deleteData:hover {
+    background-color: #e61818;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+/* File Upload */
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #c28330;
+    background: #fdfcd5a4;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+    border-color: #006134;
+}
+
+
+/* Tags Input (inherits from the text input styles) */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: #f6f8ffa4;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #006134;
+}
+
+/* Description Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: #f6f8ffa4;
+    border-radius: 6px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #006134;
+}
+
+/* Responsive Styles */
+
+/* For devices with max-width 1024px */
+@media (max-width: 1024px) {
+    input[type="file"],
+    input[type="text"],
+    textarea {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+/* For devices with max-width 600px */
+@media (max-width: 600px) {
+    input[type="file"],
+    input[type="text"],
+    textarea {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+.ding{
+    border: 2px solid rgb(204, 12, 12);
+    background: #fcecec;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+#deleteUniversityButton, 
+#deleteCourseButton, 
+#deleteSemesterButton, 
+#deleteSubjectButton, 
+#deleteQuestionPaperButton {
+    background-color: rgb(214, 3, 3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#deleteUniversityButton:hover, 
+#deleteCourseButton:hover, 
+#deleteSemesterButton:hover, 
+#deleteSubjectButton:hover, 
+#deleteQuestionPaperButton:hover {
+    background-color: darkred;
+}

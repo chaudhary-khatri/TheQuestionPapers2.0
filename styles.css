@@ -1,0 +1,1203 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e2f4fe, #c9d6ff);
+
+}
+
+
+
+/* ============================ */
+/*      Section Styles          */
+/* ============================ */
+/* Main Content */
+main {
+    margin-top: 200px;
+    padding: 15px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ============================ */
+/*      Home Section Styles     */
+/* ============================ */
+
+/* Home Container Styling START */
+.home-container {
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 180px;
+    /* background-color: #e7f4ff8c; */
+    box-shadow: 0 4px 20px rgba(63, 122, 224, 0.3);
+    border: 1px solid #a2d2ff;
+}
+
+/* Home Section Title */
+#home h2 {
+    font-size: clamp(1.8em, 2.5vw, 2.2em); /* Responsive font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #003c8b; /* Deep blue color for text */
+    text-align: center; /* Centers the text */
+    overflow: hidden; /* Ensures no overflow issues */
+    text-shadow: 2px 2px 5px rgba(0, 60, 139, 0.3)         
+    letter-spacing: 0.05em; /* Adds slight spacing for readability */
+    padding: 10px 20px; /* Adds inner spacing */
+    background: linear-gradient(90deg, rgba(0, 60, 139, 0.1), rgba(0, 60, 139, 0.05)); /* Subtle gradient background */
+    border-radius: 5px; /* Smooth rounded edges */
+    margin: 20px auto; /* Centers the element with spacing */
+    max-width: 80%; /* Limits the width for large screens */
+}
+
+
+/* Button Wrapper Styling */
+.button-wrapper {
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+
+}
+
+/* Button Container */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+/* Home Button */
+.home-button {
+    width: 100%;
+    padding: 15px;
+    font-size: clamp(16px, 1.2vw, 18px);
+    border: none;
+    border-radius: 8px;
+    /* Makes the button round */
+    background-color: #003c8f;
+    color: #eff3ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Home Button Icon */
+.home-button i {
+    font-size: clamp(20px, 2vw, 26px);
+}
+
+/* Home Button Hover Effect */
+.home-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Improved Responsiveness */
+
+/* Large Screen (Desktop) */
+@media (min-width: 1025px) {
+    .home-container {
+        padding: 25px;
+        max-width: 800px;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .home-button {
+        font-size: clamp(16px, 1.2vw, 18px);
+    }
+}
+
+/* Medium Screen (Tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home-container {
+        padding: 20px;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .home-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile (Max-width 768px) */
+@media (max-width: 768px) {
+    .home-container {
+        margin-top: 10px;
+        padding: 11px 14px;
+    }
+
+    .button-container {
+        grid-template-columns: 1fr 1fr;
+        /* Display two buttons per row */
+        gap: 10px;
+        /* Add space between buttons */
+    }
+
+    .button-wrapper {
+        padding: 1%;
+        background: #e6effa;
+        background: linear-gradient(90deg, rgba(0, 60, 139, 0.1), rgba(0, 60, 139, 0.05));
+    }
+
+    .home-button {
+        font-size: 14px;
+        /* Slightly larger font for better readability */
+        padding: 10px 15px;
+        /* Adjust padding for better button size */
+        border-radius: 8px;
+        /* Rounded corners for a modern shape */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Slight shadow for depth */
+        transition: all 0.3s ease-in-out;
+        /* Smooth transition effect */
+    }
+
+    .home-button i {
+        font-size: 20px;
+        /* Adjust icon size to match the button size */
+    }
+
+    .home-button i {
+        font-size: 18px;
+        /* Adjust icon size for smaller screens */
+    }
+
+}
+
+/* HOME SECTION END */
+
+
+
+/* ============================ */
+/*      Search Section Styles   */
+/* ============================ */
+
+/* Search Section Container */
+.search-container {
+    /* background-color: #d0e9ff; */
+    /* Soft light blue background */
+    box-shadow: 0 4px 20px rgba(63, 122, 224, 0.25);
+    /* Enhanced shadow for depth */
+    border: 1px solid #a2d2ff;
+    /* Light border for a softer appearance */
+    border-radius: 12px;
+    /* Increased border radius for a smoother look */
+    padding: 20px;
+    /* Padding for spacing */
+    max-width: 800px;
+    /* Responsive max width relative to the parent container */
+    width: 100%;
+    /* Allow full width utilization */
+    margin: 20px auto;
+    /* Centered with top and bottom margin */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+/* Hover effect to enhance interactivity */
+.search-container:hover {
+    box-shadow: 0 6px 25px rgba(63, 122, 224, 0.35);
+    /* Darker shadow on hover for depth */
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+}
+
+/*      Responsive Styles       */
+
+/* For Tablets and Larger Devices (Default styles for screens larger than mobile) */
+@media (min-width: 481px) {
+    .search-container {
+        padding: 15px;
+        /* Adjust padding for better spacing on tablets and larger screens */
+        font-size: 16px;
+        /* Ensure text is legible */
+    }
+}
+
+/* For Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .search-container {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+        margin: 10px;
+        /* Adjust margin for mobile devices */
+        max-width: 100%;
+        /* Allow full width on mobile */
+        font-size: 15px;
+        /* Adjust font size for mobile devices */
+    }
+}
+
+
+
+/*          Search Button       */
+
+#search {
+    background: #003c8f;
+    /* Primary blue background */
+    color: #ffd94e;
+    /* Text color */
+    border-radius: 12px;
+    /* Increased border radius for a smoother look */
+    padding: 20px;
+    /* Padding for internal spacing */
+    max-width: 95%;
+    /* Responsive max width */
+    width: 100%;
+    /* Allow full width utilization */
+    margin: 20px auto;
+    /* Centering with top and bottom margins */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions for hover effects */
+}
+
+/*      Search Form Styles      */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items */
+    width: 100%;
+    /* Allow full width utilization */
+    max-width: 600px;
+    /* Set max width for the form */
+    margin: auto;
+    /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 0px;
+    /* Margin below each form group */
+    width: 100%;
+    /* Full width for form groups */
+}
+
+/* Select Input Styles */
+select {
+    width: 100%;
+    /* Full width for select inputs */
+    padding: 10px;
+    /* Padding for select inputs */
+    border-radius: 8px;
+    /* Rounded corners for select inputs */
+    font-size: 16px;
+    /* Font size for select inputs */
+    background: #e9f6ff;
+    /* Light background for select inputs */
+    transition: border-color 0.3s;
+    /* Smooth transition for border color */
+}
+
+select:focus {
+    border-color: #3346a3;
+    /* Border color on focus */
+}
+
+/* Label Styles */
+.search-form label {
+    display: block;
+    /* Block display for labels */
+    margin-bottom: -8px;
+    /* Margin below labels */
+    font-size: 16px;
+    /* Font size for labels */
+    color: #e3f1ff;
+    /* Label color */
+    font-weight: bold;
+    /* Bold labels */
+}
+
+/* Text Input Styles */
+.search-form input[type="text"] {
+    padding: 10px;
+    /* Padding for text input */
+    border: 2px solid #1e5a99;
+    /* Border color for text input */
+    font-weight: bold;
+    /* Bold text input */
+    width: 100%;
+    /* Full width for text input */
+    margin-bottom: 10px;
+    /* Margin below text input */
+}
+
+/* Button Styles */
+.search-form button {
+    width: 65%;
+    background-color: #00c867;
+    /* Button background color */
+    color: rgb(247, 248, 255);
+    /* Button text color */
+    font-weight: bold;
+    /* Bold button text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Button padding */
+    font-size: 16px;
+    /* Button font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 8px;
+    /* Rounded corners for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.search-form button:hover {
+    background-color: #02e276;
+    /* Change background color on hover */
+    color: #006800;
+    /* Change text color on hover */
+}
+
+/* Option Styles */
+.search-form option {
+    background-color: #edfffa;
+    /* Background color for options */
+    color: #000e8b;
+    /* Text color for options */
+    font-weight: 500;
+    /* Weight for option text */
+    padding: 10px;
+    /* Padding for options */
+}
+
+/*      Additional Responsive    */
+@media (max-width: 768px) {
+    #search {
+        padding: 15px;
+        /* Adjust padding for better spacing on smaller screens */
+        margin: 15px auto;
+        /* Reduce margin for smaller screens */
+        width: 100%;
+        /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #search {
+        padding: 10px;
+        /* Further adjust padding for mobile devices */
+        margin: 10px auto;
+        /* Reduce margin for mobile devices */
+    }
+}
+
+/* Mobile Styles for serach section */
+@media screen and (max-width: 768px) {
+
+    /* Adjust the container for mobile */
+    .search-container {
+        padding: 15px;
+        /* max-width: 100%; */
+        margin: 10px 0;
+        box-shadow: none;
+        /* Optional: Remove shadows for mobile for a cleaner look */
+    }
+
+    #search {
+        padding: 15px;
+    }
+
+    .search-form {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    select,
+    input[type="text"],
+    .search-form button {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    .search-form label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    /* Make the select dropdowns more mobile-friendly */
+    .search-form select {
+        background: #ffffff;
+        /* Ensure color consistency on mobile */
+        border: 1px solid #5b76ff;
+        font-size: 13px;
+    }
+
+    .search-form select:focus {
+        border-color: #011ca5;
+        outline: none;
+    }
+
+
+    /* Style the options in the dropdown */
+    .search-form select option {
+
+        background-color: #edfffa;
+        /* Lighter version of the search container background */
+        color: #000e8b;
+        /* Match text color with your theme */
+        font-weight: 500;
+        padding: 10px;
+    }
+
+    /* Hover and active states for dropdown options (in some browsers) */
+    select option:hover,
+    select option:active {
+        background-color: #1532c3;
+        /* Highlight background when hovered */
+        color: rgb(5, 19, 56);
+        /* White text for readability */
+    }
+
+    /* Adjust button for mobile */
+    .search-form button {
+        width: 84%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/*        Search Section ENDS   */
+
+
+
+/* ============================ */
+/*      Search Results Styles   */
+/* ============================ */
+/* Search Results Section */
+#search-results {
+    margin: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f9fafb, #e3f2fd);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-results h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Base styles for search results grid (2x2 layout for larger screens) */
+#search-results #results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* 2 items per row */
+    gap: 20px;
+}
+
+/* Media query for mobile devices (1x1 layout for smaller screens) */
+@media (max-width: 600px) {
+    #search-results #results {
+        grid-template-columns: 1fr;
+        /* 1 item per row */
+    }
+}
+
+
+
+/* PDF Item Card */
+.pdf-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f5d3d3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.pdf-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+}
+
+/* PDF Preview Image */
+.pdf-preview {
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.pdf-item:hover .pdf-preview {
+    transform: scale(1.05);
+}
+
+/* PDF Name */
+.pdf-name {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    word-break: break-word;
+    transition: color 0.3s ease;
+}
+
+.pdf-item:hover .pdf-name {
+    color: #2a7ae2;
+}
+
+/* Download Button */
+.download-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    margin-top: 12px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.download-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:active {
+    background-color: #388e3c;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pdf-item {
+    animation: fadeInUp 0.5s ease both;
+}
+
+/* Responsive Styles */
+
+/* Medium screens */
+@media (max-width: 768px) {
+    #results {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .pdf-preview {
+        max-height: 160px;
+        /* Smaller preview for medium screens */
+    }
+
+    .pdf-name {
+        font-size: 0.95rem;
+        /* Slightly smaller font */
+    }
+
+    .download-button {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        /* Smaller padding for button */
+    }
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+    #results {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .pdf-item {
+        padding: 15px;
+        /* Reduce padding for smaller cards */
+    }
+
+    .pdf-preview {
+        max-height: 140px;
+    }
+
+    .pdf-name {
+        font-size: 0.9rem;
+    }
+
+    .download-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    #results {
+        grid-template-columns: 1fr;
+    }
+
+    .pdf-item {
+        padding: 10px;
+        /* Compact padding for very small screens */
+    }
+
+    .pdf-preview {
+        max-height: 120px;
+    }
+
+    .pdf-name {
+        font-size: 0.85rem;
+    }
+
+    .download-button {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Search Results Ends */
+
+
+
+
+
+
+
+
+
+/* ============================ */
+/*      Explore Section Styles  */
+/* ============================ */
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #035cbc39;
+    /* Border color and thickness */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    box-shadow: 2px 4px 8px rgba(54, 112, 211, 0.201);
+}
+
+
+/* Explore Previous Year Paper Section */
+#explore-previous-year-paper {
+    padding: 20px;
+    text-align: center;
+}
+
+#explore-previous-year-paper h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#explore-previous-year-paper p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.explore-previous-year-paper-categories {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.explore-previous-year-paper-categories .btn {
+    background-color: #fff;
+    border-color: #3498db;
+    /* Theme color */
+    color: #0d6097;
+    /* Theme color */
+    padding: 10px 20px;
+    border: 1px solid #3498db;
+    /* Theme color */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items to the start */
+    gap: 25px;
+    /* Space between text and icon */
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.explore-previous-year-paper-categories .btn i {
+    color: #0765a4;
+    /* Theme color for icon */
+    margin-bottom: 5px;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+
+.explore-previous-year-paper-categories .btn:hover {
+    background-color: #3498db;
+    /* Theme color on hover */
+    color: #fff;
+    /* White text on hover */
+    border-color: #3498db;
+    /* Border color on hover */
+}
+
+.explore-previous-year-paper-categories .btn:hover i {
+    color: #f6f5ff;
+    /* White icon color on hover */
+}
+
+
+#explore {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: #bbd4f067; */
+    box-shadow: 2px 4px 8px rgba(63, 122, 224, 0.21);
+    border: 1px solid #000e8b2f;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#explore h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000e8b;
+}
+
+#explore p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.explore-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.category-card i {
+    font-size: 3rem;
+    color: #3871c1;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.category-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.category-card a {
+    color: #3871c1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.category-card a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Section Visibility */
+.hidden {
+    display: none;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1001;
+    position: relative;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background-color: #3871c1;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #1e5a99;
+}
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Responsive Design */
+
+/* iPhone 12 Pro Screen Size (Specifically) */
+@media only screen and (min-width: 360px) and (max-width: 844px) and (orientation: portrait) {
+
+    .explore-previous-year-paper-categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .explore-previous-year-paper-categories .btn {
+        padding: 5px 10px;
+    }
+}
+
+/* Large Screens (Desktops) */
+@media only screen and (min-width: 1200px) {
+    .explore-previous-year-paper-categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Medium Screens (Laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .explore-previous-year-paper-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small Screens (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .explore-previous-year-paper-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .explore-previous-year-paper-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+/* Feedback Form Container */
+#feedback-form {
+    background-color: #86b6ff56;
+    border: 2px solid #9fc6ff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Form Elements */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    font-size: 1rem;
+    color: #333;
+    background: #fffafe;
+    font-family: poppins;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: poppins;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4e9ef1;
+    box-shadow: 0 0 5px rgba(78, 158, 241, 0.5);
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #4e9ef1;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2a7fd4;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.feedback-section label {
+    font-size: large;
+    font-weight: bold;
+    color: #000e8b;
+}
+
+/* Header Section */
+.feedback-header {
+    color: #000e8b;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.feedback-header2 {
+    color: #000e8b;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Rating Stars */
+
+
+
+.star {
+    font-size: 28px;
+    color: #978989;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.selected {
+    color: #ff9800;
+}
+
+.star.highlight {
+    color: #ffcc00;
+}
+
+.rating-container {
+    margin: 16px 0;
+    display: flex;
+    gap: 8px;
+}
+
+/* Feedback List */
+#feedback-display {
+    background-color: #86b6ff56;
+    border: 2px solid #9fc6ff;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.feedback-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item strong {
+    color: #4e9ef1;
+    font-size: 1.2rem;
+}
+
+.feedback-item p {
+    margin-top: 8px;
+    color: #555;
+}
+
+.category-tag {
+    background-color: #f1f1f1;
+    color: #888;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 10px;
+    margin-right: 12px;
+}
+
+.rating-display {
+    font-size: 16px;
+    color: #ff9800;
+    margin-bottom: 12px;
+}
+
+.reply-section {
+    margin-top: 16px;
+}
+
+.reply-section strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.reply-section p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.reply-section .reply-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+    display: none;
+}
+
+.reply-section .reply-button {
+    padding: 8px 16px;
+    background-color: #4e9ef1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    margin-top: 12px;
+}
+
+.reply-section .reply-button:hover {
+    background-color: #2a7fd4;
+}
+
+/* Admin-specific UI for reply */
+.feedback-item.admin-reply {
+    background-color: #e3f2fd;
+}
+
+/* Category Filter */
+#filter-category {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}

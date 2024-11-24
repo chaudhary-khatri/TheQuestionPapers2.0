@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e2f4fe, #c9d6ff);
+    color: #333;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+h1 {
+    background-color: #003c8f;
+    color: #c0dbfb;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0rem auto;
+    background-color: #3871c1;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* University Section */
+.university-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #c0dbfb;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.university-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0748a3;
+    
+}
+
+/* Course Section */
+.course-section {
+    margin-left: 20px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #e8f4ff;
+    border: 1px solid #e1e8f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0056b3;
+  
+}
+
+/* Semester Section */
+.semester-section {
+    padding: 1rem;
+    background-color: #d4ebff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.semester-section h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 1rem;
+}
+
+.subject-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subject-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Question Paper Section */
+.question-paper-section {
+    margin-left: 60px;
+    margin-bottom: 1rem;
+}
+
+.question-paper-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.question-paper-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.question-paper-card h5 {
+    font-size: 1.5rem;
+    color: #003c8f;
+    margin-bottom: 0.5rem;
+}
+
+.question-paper-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.question-paper-card .view-btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.question-paper-card .view-btn:hover {
+    background-color: #003c8f;
+}
+
+/* Description styling */
+.description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #003c8f;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #cce4ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .university-section,
+    .course-section,
+    .semester-section {
+        margin-left: 0;
+    }
+
+    .question-paper-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .question-paper-card h5 {
+        font-size: 1.3rem;
+    }
+
+    .question-paper-card .view-btn {
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 2rem;
+        margin-top: 150px;
+    }
+}

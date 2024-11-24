@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - The Question Papers</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="Global.css">
+    <script type="module" src="profile.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+</head>
+
+<body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <a href="#home" class="logo">
+            <img src="Mainlogo.svg" alt="YourLogo" class="logo-img">
+            <span class="logo-text">The Question Paper</span>
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="navbar-container">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Profile Section -->
+    <main class="profile-container">
+        <div class="profile-header">
+            <img id="profilePicture" class="profile-pic" src="path/to/default/profile/picture.png"
+                alt="Profile Picture">
+            <h1 id="profileName">Hello... User!</h1>
+        </div>
+
+        <!-- Profile Info Section -->
+        <section class="profile-info">
+            <h2>Personal Information:</h2>
+            <div class="info-group">
+                <p><strong>Email:</strong> <span id="profileEmail">john.doe@example.com</span></p>
+                <p><strong>First Name:</strong> <span id="profileFirstName">John</span></p>
+                <p><strong>Last Name:</strong> <span id="profileLastName">Doe</span></p>
+                <button id="editProfileButton" class="edit-button">Edit Profile</button>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section class="downloads-section">
+            <h3>Your Downloads</h3>
+            <ul id="downloadsList">
+                <!-- User downloads will be populated here -->
+                <li>No downloads available.</li>
+            </ul>
+        </section>
+
+        <!-- Profile Picture Update Section -->
+        <section class="profile-picture-update">
+            <h3>Update Profile Picture</h3>
+            <button id="uploadButton" class="upload-button">Upload New Picture</button>
+            <input type="file" id="profilePicInput" style="display: none;" accept="image/*">
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="profile-actions">
+            <button id="logoutButton" class="logout-button">Logout</button>
+        </div>
+
+        <!-- Edit Profile Form (Hidden initially) -->
+        <div class="edit-profile-container" id="editProfileContainer">
+            <h2>Edit Profile</h2>
+            <label for="editFirstName">First Name:</label>
+            <input type="text" id="editFirstName" placeholder="First Name" />
+            <label for="editLastName">Last Name:</label>
+            <input type="text" id="editLastName" placeholder="Last Name" />
+            <button id="saveProfileButton" class="save-button">Save Changes</button>
+            <button id="cancelEditButton" class="cancel-button">Cancel</button>
+        </div>
+    </main>
+    </div>
+</body>
+
+</html>

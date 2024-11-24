@@ -1,0 +1,392 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, rgba(116, 236, 255, 0.26), rgba(128, 168, 253, 0.21));
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+/* Logo */
+.logo-container {
+  width: 100%;
+  background: linear-gradient(to right, rgba(116, 236, 255, 0.26), rgba(128, 168, 253, 0.21));
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;  /* Fixes the container to the top */
+  top: 0;  /* Positions it at the top */
+  left: 0;  /* Ensures it starts from the left edge */
+  z-index: 1000;  /* Keeps it above other elements */
+  width: 100%;  /* Ensures it spans the full width of the viewport */
+}
+
+body {
+  padding-top: 80px;  /* Adds spacing to the body content to avoid overlap with the fixed logo */
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  transition: width 0.3s ease;
+  margin-top: 12px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3871c1;
+  margin-left: 10px;
+  transition: font-size 0.3s ease;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  width: 90%;
+  max-width: 450px;
+  padding: 1.5rem;
+  margin: 5% auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  padding-left: 2.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #757575;
+  transition: border-bottom 0.3s ease;
+}
+
+input:focus {
+  border-bottom: 2px solid hsl(327, 90%, 28%);
+  transition: border-bottom 0.3s ease;
+  outline: none;
+}
+
+input:focus-visible {
+  border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+label {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #757575;
+  transition: 0.3s ease all;
+  font-size: 1rem;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+  top: -1px;
+  font-size: 0.85rem;
+  color: hsl(327, 90%, 28%);
+}
+
+.recover {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: rgb(125, 125, 235);
+  transition: color 0.3s ease;
+}
+
+.recover a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background: rgb(125, 125, 235);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background: #07001f;
+  transform: translateY(-2px);
+}
+
+button i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Remove loading animation styles */
+.fa-spinner {
+  display: none;
+}
+
+.or {
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icons i {
+  color: rgb(125, 125, 235);
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
+}
+
+.icons i:hover {
+  background: #07001f;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#signUpButton,
+#signInButton {
+  color: rgb(160, 101, 232);
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#signUpButton:hover,
+#signInButton:hover {
+  color: rgb(23, 194, 103);
+  text-decoration: none;
+}
+
+/* Responsive Modal Styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f2fcfd;
+  border: 2px solid black;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  padding: 20px;
+}
+
+
+.modal-content {
+  position: relative;
+}
+
+.close {
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#passwordRecoveryForm .input-group {
+  margin-bottom: 1rem;
+}
+
+#passwordRecoveryForm label {
+  top: 130px;
+  font-size: 0.85rem;
+  color: hsl(327, 90%, 28%);
+}
+
+#passwordRecoveryForm input:focus~label,
+#passwordRecoveryForm input:not(:placeholder-shown)~label {
+  top: -1px;
+  font-size: 0.85rem;
+  color: hsl(327, 90%, 28%);
+}
+
+#passwordRecoveryForm button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+/* Loading Indicators */
+.messageDiv {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.messageDiv[role="alert"] {
+  font-size: 0.9rem;
+}
+
+.messageDiv[hidden] {
+  display: none;
+}
+
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.social-btn:focus {
+  outline: 2px solid hsl(327, 90%, 28%);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .logo img {
+    width: 75px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 1.2rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .input-group i {
+    left: 8px;
+    font-size: 0.9rem;
+  }
+
+  input {
+    padding: 0.65rem 1.2rem;
+    padding-left: 2rem;
+    font-size: 0.95rem;
+  }
+
+  label {
+    left: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .recover {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+
+  .icons i {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    margin: 0 8px;
+  }
+
+  .links {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #signUpButton,
+  #signInButton {
+    font-size: 0.95rem;
+  }
+}
